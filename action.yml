@@ -1,11 +1,4 @@
-name: 'GitHub Value App   PR Survey Comment'
-description: 'Posts a pull request comment with a survey link containing PR metadata.'
-author: '@mattg57'
-branding:
-  icon: 'message-square'
-  color: 'green'
-
-# action.yml
+# action.yml (inside .github/actions/post-feedback-link/)
 name: 'Copilot Survey Estimate per PR'
 description: 'GH Copilot feedback survey link on pull requests'
 inputs:
