@@ -1,0 +1,18 @@
+# action.yml
+name: 'PR Survey Comment'
+description: 'Comment a dynamic survey link on pull requests'
+inputs:
+  base-url:
+    description: 'Base survey URL (e.g., https://yourdomain.com/copilot/surveys/new)'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Comment survey link
+      uses: peter-evans/create-or-update-comment@v4
+      with:
+        token: ${{ github.token }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          📋 [Click here to complete your survey](${{ inputs.base-url }}?author=${{ github.event.pull_request.user.login }}&repo=${{ github.repository }}&prno=${{ github.event.pull_request.number }})
