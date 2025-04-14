@@ -1,9 +1,16 @@
+name: 'GitHub Value App   PR Survey Comment'
+description: 'Posts a pull request comment with a survey link containing PR metadata.'
+author: '@mattg57'
+branding:
+  icon: 'message-square'
+  color: 'green'
+
 # action.yml
-name: 'PR Survey Comment'
-description: 'Comment a dynamic survey link on pull requests'
+name: 'Copilot Survey Estimate per PR'
+description: 'GH Copilot feedback survey link on pull requests'
 inputs:
   base-url:
-    description: 'Base survey URL (e.g., https://yourdomain.com/copilot/surveys/new)'
+    description: 'Base survey URL (e.g., https://www.gvm-chart.com/copilot/surveys/new)'
     required: true
 
 runs:
